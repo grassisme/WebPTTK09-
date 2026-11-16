@@ -1,0 +1,185 @@
+/* ===== Supermarket7 - CSS dung chung ===== */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #222;
+    background: #f5f7fa;
+}
+
+a { color: #1a5fa8; }
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px 24px;
+    background: #fff;
+    border: 1px solid #dde3ea;
+    border-radius: 6px;
+}
+.container.narrow { max-width: 480px; margin-top: 60px; }
+
+.title {
+    text-align: center;
+    color: #1a5fa8;
+    margin: 4px 0 18px;
+}
+.subtitle { text-align: center; margin: 0 0 16px; }
+
+.center { text-align: center; }
+.right  { text-align: right; }
+.left   { text-align: left; }
+
+/* Thanh tren cung */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    background: #e3f1fd;
+    border-bottom: 1px solid #b9d9f5;
+}
+
+/* Nut mau xanh nhat */
+.btn {
+    display: inline-block;
+    padding: 7px 16px;
+    font-size: 14px;
+    color: #0d3b66;
+    background: #cfe8fc;
+    border: 1px solid #8cc2ef;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover { background: #b6dcfa; }
+.btn:disabled,
+.btn[disabled] {
+    color: #888;
+    background: #e9eef2;
+    border-color: #ccd5dc;
+    cursor: not-allowed;
+}
+.btn-small { padding: 4px 10px; font-size: 13px; }
+
+.inline { display: inline; }
+
+.actions {
+    margin-top: 18px;
+    text-align: center;
+}
+.actions .btn,
+.actions form { margin: 0 6px; }
+
+/* Menu trang chu */
+.menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.menu li { margin: 10px 0; }
+.menu .btn { min-width: 220px; }
+
+/* Form */
+.form-table td { padding: 6px 8px; }
+.form-table input { width: 240px; padding: 6px; }
+
+.search-form {
+    text-align: center;
+    margin-bottom: 18px;
+}
+.search-form input,
+.search-form select {
+    padding: 6px;
+    margin: 0 8px 0 4px;
+}
+
+/* Bang co vien */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+.data-table th,
+.data-table td {
+    border: 1px solid #9aa7b4;
+    padding: 6px 8px;
+}
+.data-table th { background: #e3f1fd; }
+.data-table tbody tr:hover { background: #f4f9fe; }
+.data-table .total-row td { background: #f7f7f7; }
+.data-table tr.row-bad td { background: #fde2e2; }
+
+.info-table {
+    border-collapse: collapse;
+    margin: 0 auto 12px;
+    min-width: 60%;
+}
+.info-table th,
+.info-table td {
+    border: 1px solid #9aa7b4;
+    padding: 6px 10px;
+    text-align: left;
+}
+.info-table th { background: #f0f6fc; width: 170px; }
+
+/* Chi tiet mat hang */
+.detail {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.detail-image img {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    border: 1px solid #dde3ea;
+    background: #fafafa;
+}
+
+/* Thong bao */
+.message {
+    margin: 12px auto;
+    padding: 10px 14px;
+    text-align: center;
+    border: 1px solid #b9d9f5;
+    background: #eef7ff;
+    border-radius: 4px;
+}
+.message.warning { border-color: #f0c36d; background: #fff8e1; }
+.message.error   { border-color: #e9a3a3; background: #fdecec; color: #a12020; }
+
+.ok  { color: #1b7f3b; font-weight: bold; }
+.bad { color: #c62828; font-weight: bold; }
+
+/* Hop thong bao co nut OK */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 100;
+}
+.modal-box {
+    min-width: 320px;
+    max-width: 520px;
+    padding: 20px 24px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #8cc2ef;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.modal-box p { margin: 0 0 16px; }
+
+/* In hoa don */
+@media print {
+    body { background: #fff; }
+    .no-print { display: none !important; }
+    .container { border: none; margin: 0; max-width: none; }
+}
